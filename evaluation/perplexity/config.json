@@ -1,0 +1,32 @@
+{
+  "model_config": {
+    "model_name": "answerdotai/ModernBERT-large",
+    "device": "auto",
+    "torch_dtype": "auto",
+    "trust_remote_code": true
+  },
+  "processing_config": {
+    "batch_size": 10,
+    "max_sequence_length": 512,
+    "use_fast_tokenizer": true,
+    "padding": true,
+    "truncation": true
+  },
+  "output_config": {
+    "save_detailed_results": true,
+    "save_summary_report": true,
+    "output_format": "json",
+    "decimal_places": 4
+  },
+  "logging_config": {
+    "level": "INFO",
+    "log_to_file": true,
+    "log_file": "perplexity.log",
+    "log_format": "%(asctime)s - %(levelname)s - %(message)s"
+  },
+  "checkpoint_config": {
+    "enable_checkpoints": true,
+    "checkpoint_interval": 10,
+    "auto_resume": true
+  }
+}

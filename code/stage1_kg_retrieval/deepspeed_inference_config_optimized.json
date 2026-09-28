@@ -1,0 +1,48 @@
+{
+    "fp16": {
+        "enabled": true,
+        "auto_cast": false,
+        "loss_scale": 0,
+        "initial_scale_power": 16,
+        "loss_scale_window": 1000,
+        "hysteresis": 2,
+        "min_loss_scale": 1
+    },
+    "bf16": {
+        "enabled": false
+    },
+    "zero_optimization": {
+        "stage": 3,
+        "offload_param": {
+            "device": "cpu",
+            "pin_memory": true,
+            "buffer_count": 4,
+            "buffer_size": 1e8,
+            "max_in_cpu": 1e9
+        },
+        "overlap_comm": false,
+        "contiguous_gradients": false,
+        "reduce_bucket_size": 2e7,
+        "stage3_prefetch_bucket_size": 2e6,
+        "stage3_param_persistence_threshold": 1e4,
+        "sub_group_size": 2e7,
+        "stage3_max_live_parameters": 2e7,
+        "stage3_max_reuse_distance": 2e7,
+        "stage3_gather_16bit_weights_on_model_save": false,
+        "allgather_partitions": true,
+        "allgather_bucket_size": 2e7,
+        "reduce_scatter": true,
+        "communication_data_type": "fp16"
+    },
+    "gradient_accumulation_steps": 1,
+    "gradient_clipping": 1.0,
+    "steps_per_print": 100,
+    "wall_clock_breakdown": false,
+    "train_micro_batch_size_per_gpu": 2,
+    "communication_data_type": "fp16",
+    "bucket_cap_mb": 5,
+    "allreduce_always_fp32": false,
+    "prescale_gradients": false,
+    "sparse_gradients": false,
+    "memory_breakdown": false
+}

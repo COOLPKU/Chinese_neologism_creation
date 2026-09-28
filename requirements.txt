@@ -1,0 +1,18 @@
+# Core dependencies (training / inference of the two learned components)
+torch==2.7.0
+transformers==4.55.0
+deepspeed==0.17.4
+numpy==2.3.2
+pandas==2.3.1
+scikit-learn==1.7.1
+scipy>=1.11
+openpyxl>=3.1
+
+# Closed-source API clients used by the verification and enrichment stages
+openai>=1.40
+anthropic>=0.34
+google-genai>=1.0
+
+# Logging / progress
+swanlab==0.6.8
+tqdm>=4.66
