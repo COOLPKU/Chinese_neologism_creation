@@ -252,7 +252,8 @@ def main():
                 args.experiment_name = f"{model_short}_{args.epochs}ep_{timestamp}"
             
             # 初始化SwanLab
-            swanlab.login(api_key='Ooa3OkJi5wkEn2ZEUx0pE')
+            # 初始化SwanLab（API key 请通过环境变量 SWANLAB_API_KEY 提供）
+            swanlab.login(api_key=os.environ.get('SWANLAB_API_KEY'))
             swanlab_run = swanlab.init(
                 project=args.project_name,
                 experiment_name=args.experiment_name,

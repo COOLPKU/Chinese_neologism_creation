@@ -130,4 +130,4 @@ cannot solve the task through surface-form memorization.
 The annotation guidelines given to the three expert annotators (layered morphology →
 semantics → pragmatics criteria, including the "bad example sentence but plausible word"
 rule) are reproduced in the paper's appendix (section "Annotation Guidelines for Human
-Judgment"); the raw annotations are in `data/evaluation/annotation/`.
+Judgment"); the raw annotations are not redistributed with this release.
