@@ -48,7 +48,7 @@ See `docs/DATA.md` for field-level documentation.
 pip install -r requirements.txt
 ```
 
-The closed-source stages call the official OpenAI / Anthropic / Google APIs; supply your own credentials through the environment variables expected by `api_based_process/api_check.py`.
+The closed-source stages call the official OpenAI / Anthropic / Google APIs; supply your own credentials through the environment variables expected by `api_based_process/api_check.py`. Training runs log to SwanLab through `code/stage1_kg_retrieval/train.py`, which reads its key from the `SWANLAB_API_KEY` environment variable.
 
 ## Reproducibility status
 
